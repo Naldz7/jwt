@@ -1,9 +1,6 @@
 package com.challenge.jwt.services.impl;
 
-import com.challenge.jwt.services.JwtService;
 import com.challenge.jwt.services.LoggingService;
-import com.challenge.jwt.utils.Base64Decoder;
-import com.challenge.jwt.utils.JwtValidator;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
@@ -69,15 +66,5 @@ public class LoggingServiceImpl implements LoggingService {
             parameters.put(paramName,paramValue);
         }
         return parameters;
-    }
-
-    @Service
-    public static class JwtServiceImpl implements JwtService {
-
-        public Boolean validateJwtPayload(String jwtPayloadToken) {
-            String decodedPayloadToken = new Base64Decoder().decodePayload(jwtPayloadToken);
-
-            return JwtValidator.validateToken(decodedPayloadToken);
-        }
     }
 }
