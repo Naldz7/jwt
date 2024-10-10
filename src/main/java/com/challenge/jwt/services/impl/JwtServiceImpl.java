@@ -2,7 +2,7 @@ package com.challenge.jwt.services.impl;
 
 import com.challenge.jwt.services.JwtService;
 import com.challenge.jwt.utils.Base64Decoder;
-import com.challenge.jwt.utils.JwtValidator;
+import com.challenge.jwt.validators.JwtValidator;
 import org.springframework.stereotype.Service;
 
 @Service

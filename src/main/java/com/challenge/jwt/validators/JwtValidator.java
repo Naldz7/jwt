@@ -1,5 +1,6 @@
-package com.challenge.jwt.utils;
+package com.challenge.jwt.validators;
 
+import com.challenge.jwt.utils.Base64Decoder;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
